@@ -39,7 +39,7 @@ class Baloncesto
                 }
                 
         /* 
-            Metodos dentro de la clase Baloncesto. Los metodos son funciones metidas dentro de los objetos
+            Metodo dentro de la clase Baloncesto. Los metodos son funciones metidas dentro de los objetos
             (en este caso dentro de una "clase")
         */
             plantilla_titulares()
@@ -71,7 +71,7 @@ class Baloncesto
             - Pues con un "extendes".  "Extiendo esa información de 'Baloncesto'.
         
         - Entonces:  
-            la clase "Resto_de_Plantilla", tiene como padre tiene como padre de esa herencia a "Baloncesto"
+            la clase "Resto_de_Plantilla", tiene como padre de esa herencia a "Baloncesto"
         
         -Necesitamos que "Resto_de_Plantilla" sea un "class" para utilizar "extends"
 
@@ -90,7 +90,7 @@ class Resto_de_Plantilla extends Baloncesto
          //constructor       
          constructor (base, escolta, alero, ala_pivot, pivot, entrenador ="Steve Kerr")  // aqui es donde elegimos como pedirla
             {
-                //Aqui no puedo utilizar "this.base, this.escolta" porque no son mios. Pertenecen a "Baloncesto"
+                //Aqui no puedo utilizar "this.base", "this.escolta", etc. porque no son de "Resto_plantillas". Pertenecen a "Baloncesto"
                 //Debo llamar al Super Constructor (que es como llamar al padre)
                     super (base, escolta, alero, ala_pivot, pivot);
                     this.entrenador = entrenador;
@@ -136,7 +136,7 @@ class Lesionados extends Baloncesto
          //constructor       
          constructor (base, escolta, alero, ala_pivot, pivot, asistente ="Phil Jackson")  // aqui es donde elegimos como pedirla
             {
-                //Aqui no puedo utilizar "this.base, this.escolta" porque no son mios. Pertenecen a "Baloncesto"
+                //Aqui no puedo utilizar "this.base", "this.escolta", etc. porque no son de "Lesionados". Pertenecen a "Baloncesto"
                 //Debo llamar al Super Constructor (que es como llamar al padre)
                     super (base, escolta, alero, ala_pivot, pivot);
                     this.asistente = asistente;
