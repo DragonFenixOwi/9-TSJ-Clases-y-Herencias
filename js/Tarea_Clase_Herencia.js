@@ -25,7 +25,7 @@
     ------------------
 */
 
-/* Prototipo Padre : Equipo de Baloncesto*/
+/* Prototipo Padre : Baloncesto*/
 class Baloncesto 
     {
         //constructor dentro de la clase Baloncesto
@@ -39,7 +39,8 @@ class Baloncesto
                 }
                 
         /* 
-            Metodos dentro de la clase Baloncesto. Los metodos son funciones metidas dentro de los objetos(en este caso dentro de una "clase")
+            Metodos dentro de la clase Baloncesto. Los metodos son funciones metidas dentro de los objetos
+            (en este caso dentro de una "clase")
         */
             plantilla_titulares()
                 {
@@ -70,8 +71,7 @@ class Baloncesto
             - Pues con un "extendes".  "Extiendo esa información de 'Baloncesto'.
         
         - Entonces:  
-            la clase "Resto_de_Plantilla", tiene como padre tiene 
-            como padre de esa herencia a "Baloncesto"
+            la clase "Resto_de_Plantilla", tiene como padre tiene como padre de esa herencia a "Baloncesto"
         
         -Necesitamos que "Resto_de_Plantilla" sea un "class" para utilizar "extends"
 
@@ -90,7 +90,7 @@ class Resto_de_Plantilla extends Baloncesto
          //constructor       
          constructor (base, escolta, alero, ala_pivot, pivot, entrenador ="Steve Kerr")  // aqui es donde elegimos como pedirla
             {
-                //Aqui no puedo utilizar "this.base, this.escolta" porque no son mios
+                //Aqui no puedo utilizar "this.base, this.escolta" porque no son mios. Pertenecen a "Baloncesto"
                 //Debo llamar al Super Constructor (que es como llamar al padre)
                     super (base, escolta, alero, ala_pivot, pivot);
                     this.entrenador = entrenador;
@@ -108,7 +108,7 @@ class Resto_de_Plantilla extends Baloncesto
             }        
 
 
-            // Metodo 2 para la clase hijo 2 
+            // Metodo 2 para la clase hijo 1 
                 plantilla_suplentes_entrenador()
                 {
                     // Visualización del resultado final en navegador 
@@ -136,7 +136,7 @@ class Lesionados extends Baloncesto
          //constructor       
          constructor (base, escolta, alero, ala_pivot, pivot, asistente ="Phil Jackson")  // aqui es donde elegimos como pedirla
             {
-                //Aqui no puedo utilizar "this.base, this.escolta" porque no son mios
+                //Aqui no puedo utilizar "this.base, this.escolta" porque no son mios. Pertenecen a "Baloncesto"
                 //Debo llamar al Super Constructor (que es como llamar al padre)
                     super (base, escolta, alero, ala_pivot, pivot);
                     this.asistente = asistente;
@@ -186,7 +186,7 @@ var lakers = new Baloncesto ("Stephen curry", "Kobe Bryant", "Michael Jordan", "
 /*
     Instancia hijo 1
 */
-//Instanciar Hijo "Lesionados" . Visualización de Suplentes
+//Instanciar Hijo "Resto_de_Plantilla" . Visualización de Suplentes
 var  Suplentes_lakers = new Resto_de_Plantilla("Chris Paul", "Allen Iverson", "Luka Donic", "Blake Griffin", "Tim Duncan");
 
 //Instanciar Hijo "Resto_de_Plantilla" . Visualización de Suplentes y Entrenador
@@ -198,10 +198,10 @@ var Suplentes_lakers_entrenador  = new Resto_de_Plantilla("Chris Paul", "Allen I
 /*
     Instancia hijo 2
 */
-//Instanciar Hijo "Resto_de_Plantilla" . Visualización de Suplentes
+//Instanciar Hijo "Lesionados" . Visualización de Suplentes
 var Lesionados_lakers= new Lesionados("OwiDragonFenix", "James Harden", "Paul George", "Anhony Davis", "Dwight Howard");
 
-//Instanciar Hijo "Resto_de_Plantilla" . Visualización de Suplentes y Entrenador
+//Instanciar Hijo "Lesionados" . Visualización de Suplentes y Entrenador
 var Lesionados_lakers_asistente= new Lesionados("OwiDragonFenix", "James Harden", "Paul George", "Anhony Davis", "Dwight Howard",undefined);
 
 
@@ -220,31 +220,34 @@ var Lesionados_lakers_asistente= new Lesionados("OwiDragonFenix", "James Harden"
     --------------------------------------
  */
 
+/*
+    -llamada de "instancia - Lakers" . "metodo del padre" que esta dentro de la clase Baloncesto "plantilla_titulares"
+    -"instancia - Lakers" . "metodo del padre  - plantilla_titulares"
+*/
 
-// llamada de "instancia - Lakers" . "metodo del padre" que esta dentro de la clase Baloncesto "plantilla_titulares"
-//"instancia - Lakers" . "metodo del padre  - plantilla_titulares"
+// Padre - Instancia Titulares
 lakers.plantilla_titulares();
 
 /*
-    Hijo 1
+    Hijo 1 - "Instancia. Metodo" 
 */
 
-// instancia. Metodo 
+// Padre - Instancia Suplentes 
 Suplentes_lakers.plantilla_suplentes();
 
-// instancia. Metodo 
+// Padre - Instancia Suplentes y asistente
 Suplentes_lakers_entrenador.plantilla_suplentes_entrenador();
 
 
 
 /*
-    Hijo 2
+    Hijo 2 - "Instancia. Metodo" 
 */
 
-// instancia. Metodo 
+// Padre - Instancia lesionados
 Lesionados_lakers.plantilla_lesionados();
 
-// instancia. Metodo 
+// Padre - Instancia lesionados y asistente
 Lesionados_lakers_asistente.plantilla_lesionados_asistente();
 
 
