@@ -5,7 +5,7 @@
    - Inventar un tipo de clase padre, que luego herede de dos tipos de clase hijo.
    - Con un mínimo de dos métodos para las clase hijos.
 
-# Desarrollo : 
+# Desarrollo - Tarea_Clase_Herencia : 
    - Clase padre = Baloncesto
       - Metodo = plantilla_titulares
    - Clase hijo 1 = Resto_de_Plantilla 
