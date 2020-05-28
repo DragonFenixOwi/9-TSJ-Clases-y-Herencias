@@ -229,25 +229,25 @@ var Lesionados_lakers_asistente= new Lesionados("OwiDragonFenix", "James Harden"
 lakers.plantilla_titulares();
 
 /*
-    Hijo 1 - "Instancia. Metodo" 
+    Hijo 1 - Suplentes y Entrenador - "Instancia. Metodo" 
 */
 
-// Padre - Instancia Suplentes 
+// Padre - Instancia. Metodo 1 
 Suplentes_lakers.plantilla_suplentes();
 
-// Padre - Instancia Suplentes y asistente
+// Padre - Instancia . Metodo 2
 Suplentes_lakers_entrenador.plantilla_suplentes_entrenador();
 
 
 
 /*
-    Hijo 2 - "Instancia. Metodo" 
+    Hijo 2 - Lesionados y Asistente - "Instancia. Metodo" 
 */
 
-// Padre - Instancia lesionados
+// Padre - Instancia  . Metodo 1
 Lesionados_lakers.plantilla_lesionados();
 
-// Padre - Instancia lesionados y asistente
+// Padre - Instancia  . Metodo 2 
 Lesionados_lakers_asistente.plantilla_lesionados_asistente();
 
 
